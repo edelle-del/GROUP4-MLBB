@@ -1,3 +1,4 @@
+import utils.session
 import matplotlib.pyplot as plt
 import streamlit as st
 import numpy as np
@@ -389,7 +390,7 @@ elif st.session_state.page_selection == 'data_cleaning':
     st.code("""
     df['Secondary_Role'].fillna('No Secondary Role', inplace=True)
     """)
-
+    df['Secondary_Role'].fillna('No Secondary Role', inplace=True)
     st.subheader("Checking for missing values after cleaning")
     missing_count = df.isnull().sum()
     st.write(missing_count)
