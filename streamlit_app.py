@@ -1,3 +1,4 @@
+import utils.session
 import matplotlib.pyplot as plt
 import streamlit as st
 import numpy as np
@@ -434,7 +435,7 @@ elif st.session_state.page_selection == 'data_cleaning':
 elif st.session_state.page_selection == 'prediction':
     st.title("Predicton")
     # Prepare input data
-      input_data = {
+    input_data = {
         'Hp': 5000,                # 14.20%
         'Hp_Regen': 50,            # 12.81%
         'Mana': 2000,              # 5.42%
